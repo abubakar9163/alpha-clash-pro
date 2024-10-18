@@ -8,12 +8,12 @@
 
 // }
 function handlekeyboardKeyUpEvent(event){
-    const playerPress=event.key;
+    const playerPressed=event.key;
     // console.log( 'player pressed',event.key);
     console.log('player pressed',playerPressed)
 
-    // stop the game
-    if(playerPressed==='Escaped'){
+    // // stop the game
+    if(playerPressed==='Escape'){
         gameOver();
     }
 
@@ -21,10 +21,10 @@ function handlekeyboardKeyUpEvent(event){
     const currentAlphabetElement=document.getElementById('current-alphabet');
     const currentAlphabet=currentAlphabetElement.innerText
     const expectedAlphabet=currentAlphabet.toLowerCase();
-    console.log(playerPress,expectedAlphabet);
+    console.log(playerPressed,expectedAlphabet);
 
     // check match or not
-    if(playerPress===expectedAlphabet){
+    if(playerPressed===expectedAlphabet){
         console.log('you get point');
         // const currentScoreElement=document.getElementById('current-score');
         // const currentScoreText=currentScoreElement.innerText
